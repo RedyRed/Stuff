@@ -302,7 +302,7 @@ do
 		}, library)
 	end
 	
-	function page.new(library, title, icon, icontype)
+	function page.new(library, title, icon)
 		local button = utility:Create("TextButton", {
 			Name = title,
 			Parent = library.pagesContainer,
@@ -329,12 +329,6 @@ do
 				TextTransparency = 0.65,
 				TextXAlignment = Enum.TextXAlignment.Left
 			}),
-            local type
-            if icontype == 1 then
-                type = 'rbxassetid://'
-            else
-                type = 'http://www.roblox.com/asset/?id='
-            end
 			icon and utility:Create("ImageLabel", {
 				Name = "Icon",
 				AnchorPoint = Vector2.new(0, 0.5),
@@ -342,7 +336,7 @@ do
 				Position = UDim2.new(0, 12, 0.5, 0),
 				Size = UDim2.new(0, 16, 0, 16),
 				ZIndex = 3,
-				Image = type..tostring(icon),
+				Image = 'http://www.roblox.com/asset/?id='..tostring(icon),
 				ImageColor3 = themes.TextColor,
 				ImageTransparency = 0.64,
 				ScaleType = Enum.ScaleType.Fit
