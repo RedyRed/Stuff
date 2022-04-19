@@ -303,11 +303,11 @@ do
 	end
 	
 	function page.new(library, title, icon, icontype)
-		local type
+		local typee
 		if icontype == 1 then
-			type = 'rbxassetid://'
-		else
-			type = 'http://www.roblox.com/asset/?id='
+			typee = 'rbxassetid://'
+		elseif icontype == (2 or nil) then
+			typee = 'http://www.roblox.com/asset/?id='
 		end
 		local button = utility:Create("TextButton", {
 			Name = title,
@@ -342,7 +342,7 @@ do
 				Position = UDim2.new(0, 12, 0.5, 0),
 				Size = UDim2.new(0, 16, 0, 16),
 				ZIndex = 3,
-				Image = type..tostring(icon),
+				Image = typee..tostring(icon),
 				ImageColor3 = themes.TextColor,
 				ImageTransparency = 0.64,
 				ScaleType = Enum.ScaleType.Fit
