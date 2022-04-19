@@ -302,7 +302,7 @@ do
 		}, library)
 	end
 	
-	function page.new(library, title, icon, iconstr)
+	function page.new(library, title, icon)
 		local button = utility:Create("TextButton", {
 			Name = title,
 			Parent = library.pagesContainer,
@@ -336,7 +336,7 @@ do
 				Position = UDim2.new(0, 12, 0.5, 0),
 				Size = UDim2.new(0, 16, 0, 16),
 				ZIndex = 3,
-				Image = iconstr
+				Image = 'http://www.roblox.com/asset/?id='..tostring(icon)
 				ImageColor3 = themes.TextColor,
 				ImageTransparency = 0.64,
 				ScaleType = Enum.ScaleType.Fit
